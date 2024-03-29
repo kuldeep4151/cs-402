@@ -4,25 +4,25 @@
 #include "staff.h"
 
 
-void printEmp(const struct Employee* employee) {
+void printEmp(const struct Employee* staff) {
     printf("NAME\t\tSALARY\t\tID\n");
     printf("---------------------------------------------------------------\n");
-    printf("%s %s\t%d\t\t%d\n", employee->first_name, employee->last_name, employee->salary, employee->id);
+    printf("%s %s\t%d\t\t%d\n", staff->first_name, staff->last_name, staff->salary, staff->id);
     printf("---------------------------------------------------------------\n\n");
 }
 
-int NextAvailableId(const struct Employee* employees, int EmployeesCount) {
+int NextAvailableId(const struct Employee* staff, int EmployeesCount) {
     int nextId = minId;
     for (int i = 0; i < EmployeesCount; i++) {
-        if (employees[i].id >= nextId) {
-            nextId = employees[i].id + 1;
+        if (staff[i].id >= nextId) {
+            nextId = staff[i].id + 1;
         }
     }
     return nextId;
 }
 
-int validateEmp(const struct Employee* employee) {
-    return (employee->id >= minId && employee->id <= maxId) &&
-           (employee->salary >= miniSalary && employee->salary <= maxSalary);
+int validateEmp(const struct Employee* staff) {
+    return (staff->id >= minId && staff->id <= maxId) &&
+           (staff->salary >= miniSalary && staff->salary <= maxSalary);
 }
 

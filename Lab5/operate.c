@@ -4,8 +4,8 @@
 
 FILE* file = NULL;
 
-int openFile(const char* filename) {
-    file = fopen(filename, "r");
+int openFile(const char* fname) {
+    file = fopen(fname, "r");
     if (file == NULL) {
         return -1;
     }

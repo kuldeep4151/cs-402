@@ -5,7 +5,7 @@
 
 extern FILE* file;
 
-int openFile(const char* filename);
+int openFile(const char* fname);
 void closeFile();
 
 #endif 

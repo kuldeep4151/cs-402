@@ -4,11 +4,11 @@
 #include <stdlib.h>
 
 
-int readint(int* value) {
+int readint(int* intval) {
     if (file == NULL) {
         return -1;
     }
-    return fscanf(file, "%d", value);
+    return fscanf(file, "%d", intval);
 }
 
 
@@ -19,9 +19,9 @@ int readstring(char* str, int maximumlength) {
     return fscanf(file, "%s", str);
 }
 
-int readfloat(float* value) {
+int readfloat(float* intval) {
     if (file == NULL) {
         return -1;
     }
-    return fscanf(file, "%f", value);
+    return fscanf(file, "%f", intval);
 }

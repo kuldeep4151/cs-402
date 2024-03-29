@@ -14,9 +14,9 @@ struct Employee {
     int salary;
 };
 
-void printEmp(const struct Employee* employee);
-int NextAvailableId(const struct Employee* employees, int EmployeesCount);
-int validateEmp(const struct Employee* employee);
+void printEmp(const struct Employee* staff);
+int NextAvailableId(const struct Employee* staff, int EmployeesCount);
+int validateEmp(const struct Employee* staff);
 
 
 #endif 

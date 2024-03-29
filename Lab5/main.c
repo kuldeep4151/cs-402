@@ -51,10 +51,10 @@ int main(int argc, char* argv[]) {
 
     closeFile();
 
-    int choice;
+    int option;
 
     do {
-        int validChoice = 1;
+        int rightOption = 1;
 
         printf("\nEmployee DB Menu:\n");
         printf("----------------------------------\n");
@@ -66,14 +66,14 @@ int main(int argc, char* argv[]) {
         printf("----------------------------------\n");
         printf("Enter your choice: ");
 
-        if (scanf("%d", &choice) != 1 || choice < 1 || choice > 5) {
-            validChoice = 0;
+        if (scanf("%d", &option) != 1 || option < 1 || option > 5) {
+            rightOption = 0;
             printf("Invalid Input. Please enter a valid number between 1 and 5.\n");
             while (getchar() != '\n');
         }
 
-        if (validChoice) {
-            switch (choice) {
+        if (rightOption) {
+            switch (option) {
                 case 1:
                     printEmployeeDB(employees, EmployeesCount);
                     break;
@@ -91,7 +91,7 @@ int main(int argc, char* argv[]) {
                     break;
             }
         }
-    } while (choice != 5);
+    } while (option != 5);
 
     return 0;
 }
