@@ -1,9 +1,9 @@
 ```markdown
 # Introduction to Advance Studies II (CS 402)
 
-## README
+# README
 
-### Prerequisites
+# Prerequisites
 
 - C compiler (e.g., GCC)
 
@@ -16,12 +16,12 @@ To build the program, follow the steps given below:
 3. Compile the source files using the C compiler (e.g., GCC):
 
 ```
-
-```
-
 ### Command to Run the Program
 
 To run the build file, use the following command:
+```
+
+
 gcc -o Basicstats main.c calculateMean.c calculateMedian.c calculateMode.c readPrint.c
 
 ```
