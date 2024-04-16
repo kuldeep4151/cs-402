@@ -7,7 +7,7 @@
 float *readFile(const char *filename, int *valueCount, int *array_capacity) {
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
-        perror("Error opening file");
+        perror("Error! unable to open file");
         exit(1);
     }
 
@@ -16,7 +16,7 @@ float *readFile(const char *filename, int *valueCount, int *array_capacity) {
     float *data = (float *)malloc(sizeof(float) * *array_capacity);
 
     if (data == NULL) {
-        perror("Error allocating memory");
+        perror("Error! for allocating memory");
         exit(1);
     }
 
@@ -49,7 +49,7 @@ void printStats(int valueCount, int array_capacity, float mean, float median, fl
     printf("    stddev:        %.3f\n", stddev);
 
     if (modesCount == 0) {
-        printf("      mode:       (0.000) No mode found. All values are unique\n");
+        printf("      mode:  No mode found.\n");
     } else {
         printf("      mode(s):");
         for (int i = 0; i < modesCount; i++) {

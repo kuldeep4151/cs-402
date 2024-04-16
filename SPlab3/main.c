@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     float *data = readFile(filename, &valueCount, &array_capacity);
 
     if (valueCount == 0) {
-        printf("No data found in the input file.\n");
+        printf("The Input file is Empty(No data).\n");
         free(data);
         return 1;
     }
