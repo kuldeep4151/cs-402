@@ -16,7 +16,7 @@ float Median(float *data, int valueCount) {
             }
         }
     }
-    //condition for Even & Odd number of values 
+    //condition check for Even & Odd number of values 
     if (valueCount % 2 == 0) {
         int midvalue1 = valueCount / 2 - 1;
         int midvalue2 = valueCount / 2;

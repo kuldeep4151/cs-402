@@ -18,7 +18,7 @@ bool checkValues(const float *data, int valueCount) {
     return true;
 }
 
-// Modified calculateMode function
+// calculate Mode function
 float *Mode(const float *data, int valueCount, int *ModeCount) {
     if (valueCount == 0 || checkValues(data, valueCount)) {
         *ModeCount = 0;
@@ -47,22 +47,38 @@ float *Mode(const float *data, int valueCount, int *ModeCount) {
         }
     }
 
-    // Check if all values occurred only once
+    // Checking if frequency of elements are same or not.
     if (Streak == 1) {
         *ModeCount = 0;
         return NULL;
     }
 
+    // Check if all frequencies are the same
+    bool frequencyCheck = true;
+    for (int i = 1; i < valueCount; i++) {
+        if (data[i] != data[0]) {
+            frequencyCheck = false;
+            break;
+        }
+    }
+
+    if (frequencyCheck) {
+        free(data);
+        *ModeCount = 0;
+        return NULL;
+    }
+
+
     *ModeCount = Counter;
     
-    // Allocate memory for the modes array
+    // Memory allocation for the modes array
     float *modeArray = malloc(sizeof(float) * Counter);
     if (modeArray == NULL) {
         perror("Error! allocating memory");
         exit(1);
     }
 
-    // Fill the modes array
+    // loading data in the array
     for (int i = 0; i < Counter; i++) {
         modeArray[i] = modeData;
     }

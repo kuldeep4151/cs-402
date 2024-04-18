@@ -23,7 +23,7 @@ float *readFile(const char *filename, int *valueCount, int *array_capacity) {
     float value;
     while (fscanf(file, "%f", &value) == 1) {
         if (*valueCount == *array_capacity) {
-            // If the array is full, allocate a new array with double the capacity
+            //creating a new array with double the capacity incase the array is full 
             *array_capacity *= 2;
             data = (float *)realloc(data, sizeof(float) * *array_capacity);
             if (data == NULL) {
@@ -39,7 +39,7 @@ float *readFile(const char *filename, int *valueCount, int *array_capacity) {
 }
 
 
-// Function to print the results
+// Function to print the final values
 void printStats(int valueCount, int array_capacity, float mean, float median, float stddev, float *modes, int modesCount, float geometricMean, float harmonicMean) {
     printf("Results:\n");
     printf("--------\n");
