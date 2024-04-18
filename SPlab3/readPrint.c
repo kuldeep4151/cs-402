@@ -49,7 +49,7 @@ void printStats(int valueCount, int array_capacity, float mean, float median, fl
     printf("    stddev:        %.3f\n", stddev);
 
     if (modesCount == 0) {
-        printf("      mode:  No mode found.\n");
+        printf("      mode:         No mode found.\n");
     } else {
         printf("      mode(s):");
         for (int i = 0; i < modesCount; i++) {

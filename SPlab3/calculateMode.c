@@ -63,7 +63,6 @@ float *Mode(const float *data, int valueCount, int *ModeCount) {
     }
 
     if (frequencyCheck) {
-        free(data);
         *ModeCount = 0;
         return NULL;
     }
